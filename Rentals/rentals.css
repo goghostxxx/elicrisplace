@@ -1,0 +1,201 @@
+#rental-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.rental-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.rental-card:hover {
+    transform: translateY(-5px);
+}
+.rental-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.rental-card h3 {
+    margin: 10px 0;
+}
+.rental-card p {
+    margin: 5px 0;
+}
+.rental-card button {
+    background: #AF5447; 
+    color: #EADFC1;
+    border: none;
+    padding: 12px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; 
+    font-size: 16px; 
+    text-transform: uppercase; 
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px; 
+}
+.rental-card button:hover {
+    background: #872111; 
+    transform: scale(1.05); 
+}
+#rental-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#rental-details > div {
+    background: #c0cda1;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px; 
+    width: 90%;
+    text-align: center;
+    max-height: 90vh; 
+    overflow-y: auto; 
+}
+#image-gallery {
+    display: flex;
+    gap: 15px; 
+    overflow-x: auto;
+    margin: 20px 0;
+    padding: 10px;
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc #f0f0f0; 
+}
+#image-gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0; 
+}
+#gallery-title {
+    font-weight: bold;
+    margin: 10px;
+    color: #AF5447;
+}
+#reserve-btn {
+    background: #872111; 
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #EADFC1;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+#reserve-btn:hover {
+    background: #AF5447;
+}
+#cancel-btn {
+    background: #AF5447; 
+    margin: 20px 10px;
+    padding: 10px 20px;
+    color: #EADFC1;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+#cancel-btn:hover {
+    background: #872111;
+}
+.closeBtn {
+    background: #AF5447; 
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #EADFC1;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.closeBtn:hover {
+    background: #872111;
+}
+#reservation-form, #cancellation-form {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#reservation-form label, #cancellation-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#reservation-form input, #reservation-form select, #reservation-form textarea,
+#cancellation-form input, #cancellation-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#reservation-form button[type="submit"], #cancellation-form button[type="submit"] {
+    background: #872111;
+    color: #EADFC1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#reservation-form button[type="submit"]:hover, #cancellation-form button[type="submit"]:hover {
+    background: #AF5447;
+}
+#reservation-form button[type="button"], #cancellation-form button[type="button"] {
+    background: #EADFC1;
+    color: #872111;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#reservation-form button[type="button"]:hover, #cancellation-form button[type="button"]:hover {
+    background: #872111;
+    color: #EADFC1;
+}
+
+@media (max-width: 768px) {
+    #rental-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    #image-gallery img {
+        width: 180px;
+        height: 120px;
+    }
+    .rental-card button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    #reservation-form, #cancellation-form {
+        max-width: 100%;
+    }
+    #reservation-form input, #reservation-form select, #reservation-form textarea,
+    #cancellation-form input, #cancellation-form textarea {
+        font-size: 14px;
+    }
+}
