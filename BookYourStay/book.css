@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+    padding: 2rem;
+}
+header h1 {
+    margin-bottom: 0.5rem;
+}
+.toggle {
+    margin-top: 1rem;
+    text-align: center;
+}
+.toggle button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.toggle button.active {
+    background-color: #872111;
+    color: #EADFC1;
+}
+.toggle button:not(.active) {
+    background-color: #AF5447;
+    color: #c0cda1;
+}
+.booking-form {
+    flex: 1;
+    width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #AF5447;
+    color: #c0cda1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+.booking-form.hidden {
+    display: none;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #EADFC1;
+    color: #872111;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+    background-color: #c0cda1;
+    color: #AF5447;
+}
+input.invalid, select.invalid, textarea.invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+input.valid, select.valid, textarea.valid {
+    border-color: green;
+    background-color: #e6ffe6;
+}
+.booking-form input.invalid,
+.booking-form select.invalid,
+.booking-form textarea.invalid {
+    animation: shake 0.25s;
+}
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0px); }
+}
+.success-message {
+    display: none;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+.booking-form {
+    margin: 2rem auto;
+    padding: 0.5rem;
+    max-width: 400px;
+}
+.toggle button {
+    display: block;
+    width: 50%;
+    margin: 0.5rem auto;
+}
+}

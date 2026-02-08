@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<title>Elicris Place - Luxury Hotel & Airbnb in Ikeja</title>
+<meta name="description" content="Elicris Place offers a boutique hotel experience and Airbnb‑style rentals in Ikeja. Enjoy cozy rooms, modern amenities, and a relaxing stay." />
+<meta name="keywords" content="Elicris Place, boutique hotel, vacation rentals, Airbnb, hotel in Ikeja" />
+<link rel="shortcut icon" href="../logo-104x99.png" type="image/x-icon">
+<meta property="og:title" content="Elicris Place – Boutique Hotel & Rentals" />
+<meta property="og:description" content="Stay at Elicris Place: a warm boutique hotel or private Airbnb-style rental in Ikeja. Book your stay now!" />
+<meta property="og:image" content="https://elicrisplace.com/images/og-image.jpg" />
+<meta property="og:url" content="https://elicrisplace.com/" />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://elicrisplace.com/" />
+<link rel="stylesheet" href="./book.css" />
+<link rel="stylesheet" href="../nav&footer.css">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Hotel",
+"name": "Elicris Place",
+"description": "Luxury hotel and Airbnb rentals in Ikeja",
+"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Anuoluwapo Cl, Allen",
+    "addressLocality": "Ikeja",
+    "postalCode": "100281",
+    "addressCountry": "NG"
+},
+"telephone": "+2349167140000",
+"url": "https://elicrisplace.com/"
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo-container">
+    <a href="../index.html">
+        <img src="../logo-104x99.png" alt="Elicris Place Logo" class="logo">
+        <span class="title">Elicris Place</span>
+    </a>
+</div>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="nav-section">
+    <ul class="nav-links">
+        <li><a href="../Rooms/rooms.html">Rooms</a></li>
+        <li><a href="../Rentals/rentals.html">Rentals</a></li>
+        <li><a href="../Gallery/gallery.html">Gallery</a></li>
+        <li><a href="./book.html">Book Your Stay</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+        <li class="mobile-book">
+            <a href="./book.html" class="btn-book mobile-btn">Book Your Stay</a>
+        </li>
+    </ul>
+
+    <a href="./book.html" class="btn-book desktop-btn">Book Your Stay</a>
+</div>
+
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
+</nav>
+
+<header>
+    <h1>Book Your Stay</h1>
+    <p>Reserve your perfect accommodation today!</p>
+</header>
+
+<main>
+    <div class="toggle">
+        <button id="airbnbBtn" class="active">Book Airbnb</button>
+        <button id="hotelBtn">Book Hotel</button>
+    </div>
+
+    <form id="airbnbForm" class="booking-form">
+        <h2>Book Airbnb</h2>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+        <div class="form-group">
+            <label for="checkin">Check-in:</label>
+            <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="form-group">
+            <label for="checkout">Check-out:</label>
+            <input type="date" id="checkout" name="checkout" required>
+        </div>
+        <div class="form-group">
+            <label for="guests">Guests:</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="amenities">Amenities:</label>
+            <textarea id="amenities" name="amenities"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="nameAirbnb">Full Name:</label>
+            <input type="text" id="nameAirbnb" name="nameAirbnb" required>
+        </div>
+        <div class="form-group">
+            <label for="emailAirbnb">Email:</label>
+            <input type="email" id="emailAirbnb" name="emailAirbnb" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneAirbnb">Phone:</label>
+            <input type="tel" id="phoneAirbnb" name="phoneAirbnb" required>
+        </div>
+        <button type="submit">Book Airbnb</button>
+        <div id="successAirbnb" class="success-message">Airbnb booking submitted!</div>
+    </form>
+
+    <form id="hotelForm" class="booking-form hidden">
+        <h2>Book Hotel</h2>
+        <div class="form-group">
+            <label for="checkinHotel">Check-in:</label>
+            <input type="date" id="checkinHotel" name="checkinHotel" required>
+        </div>
+        <div class="form-group">
+            <label for="checkoutHotel">Check-out:</label>
+            <input type="date" id="checkoutHotel" name="checkoutHotel" required>
+        </div>
+        <div class="form-group">
+            <label for="guestsHotel">Guests:</label>
+            <select id="guestsHotel" name="guestsHotel" required>
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4+">4+</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="">Select</option>
+                <option value="standard">Standard</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Suite</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="nameHotel">Full Name:</label>
+            <input type="text" id="nameHotel" name="nameHotel" required>
+        </div>
+        <div class="form-group">
+            <label for="emailHotel">Email:</label>
+            <input type="email" id="emailHotel" name="emailHotel" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneHotel">Phone:</label>
+            <input type="tel" id="phoneHotel" name="phoneHotel" required>
+        </div>
+        <button type="submit">Book Hotel</button>
+        <div id="successHotel" class="success-message">Hotel booking submitted!</div>
+    </form>
+</main>
+
+<footer class="footer">
+<div class="footer-container">
+    <div class="footer-left">
+        <img src="../logo-104x99.png" alt="Elicris Place Logo" width="80" class="footer-logo top-logo">
+        <h3 class="footer-logo">Elicris Place</h3>
+        <p class="footer-desc">
+            Your home away from home. Experience <br>the perfect blend of comfort, ease, and <br>warm hospitality at Elicris Place.
+        </p>
+
+        <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+            <li><a href="../Rooms/rooms.html">Rooms & Hotel</a></li>
+            <li><a href="../Rentals/rentals.html">Airbnb Rentals</a></li>
+            <li><a href="../Gallery/gallery.html">Gallery</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column contact-section">
+        <h4>Contact Us</h4>
+        <p>📍 6 Anuoluwapo Cl, Allen, <br> Ikeja 100281, Lagos</p>
+        <a href="tel:+2349167140000" class="phone"><i class="fa-solid fa-phone"></i> +234 916 714 0000</a>
+        <a href="mailto:info@elicrisplace.com" class="mail"><i class="fa-solid fa-envelope"></i> info@elicrisplace.com</a>
+        <p><i class="fa-solid fa-circle-check"></i> 24/7 Support Available</p>
+    </div>
+</div>
+
+<hr>
+<p class="copyright">© 2025 Elicris Place. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+<script src="./book.js"></script>
+</body>
+</html>

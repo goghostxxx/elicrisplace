@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
+<title>Elicris Place - Luxury Hotel & Airbnb in Ikeja</title>
+<meta name="description" content="Elicris Place offers a boutique hotel experience and Airbnb‑style rentals in Ikeja. Enjoy cozy rooms, modern amenities, and a relaxing stay." />
+<meta name="keywords" content="Elicris Place, boutique hotel, vacation rentals, Airbnb, hotel in Ikeja" />
+<meta property="og:title" content="Elicris Place – Boutique Hotel & Rentals" />
+<meta property="og:description" content="Stay at Elicris Place: a warm boutique hotel or private Airbnb-style rental in Ikeja. Book your stay now!" />
+<meta property="og:image" content="https://elicrisplace.com/images/og-image.jpg" />
+<meta property="og:url" content="https://elicrisplace.com/" />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://elicrisplace.com/" />
+<link rel="stylesheet" href="./rooms.css" />
+<link rel="stylesheet" href="../nav&footer.css">
+<link rel="shortcut icon" href="../logo-104x99.png" type="image/x-icon">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Hotel",
+"name": "Elicris Place",
+"description": "Luxury hotel and Airbnb rentals in Ikeja",
+"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6 Anuoluwapo Cl, Allen",
+    "addressLocality": "Ikeja",
+    "postalCode": "100281",
+    "addressCountry": "NG"
+},
+"telephone": "+2349167140000",
+"url": "https://elicrisplace.com/"
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo-container">
+    <a href="../index.html">
+        <img src="../logo-104x99.png" alt="Elicris Place Logo" class="logo">
+        <span class="title">Elicris Place</span>
+    </a>
+</div>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<div class="nav-section">
+    <ul class="nav-links">
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="../Rentals/rentals.html">Rentals</a></li>
+        <li><a href="../Gallery/gallery.html">Gallery</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    
+        <li class="mobile-book">
+            <a href="../BookYourStay/book.html" class="btn-book mobile-btn">Book Your Stay</a>
+        </li>
+    </ul>
+
+    <a href="../BookYourStay/book.html" class="btn-book desktop-btn">Book Your Stay</a>
+</div>
+
+<label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
+</nav>
+
+<h1 style="text-align: center; margin: 20px;">Hotel Rooms</h1>
+<div id="room-list"></div>
+
+<div id="room-details" style="display: none;">
+<div>
+    <h2 id="room-name"></h2>
+    <p id="room-description"></p>
+    <p id="room-price"></p>
+    <h3 id="gallery-title">Room Gallery</h3>
+    <div id="image-gallery">
+    </div>
+    <button id="reserve-btn" onclick="showReservationForm()">Reserve Now</button>
+    <div id="reservation-form" style="display: none;">
+    <h3>Make a Reservation</h3>
+    <form id="reserve-form">
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" required><br><br>
+        
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" required><br><br>
+        
+        <label for="guests">Number of Guests:</label>
+        <select id="guests" required>
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        </select><br><br>
+        
+        <label for="requests">Special Requests (optional):</label><br>
+        <textarea id="requests" rows="3" placeholder="e.g., Extra bed, late check-out"></textarea><br><br>
+        
+        <button type="submit">Confirm Reservation</button>
+        <button type="button" onclick="hideReservationForm()">Cancel</button>
+    </form>
+    </div>
+    <button onclick="closeDetails()" class="closeBtn">Close</button>
+</div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="../logo-104x99.png" alt="Elicris Place Logo" width="80" class="footer-logo top-logo">
+            <h3 class="footer-logo">Elicris Place</h3>
+            <p class="footer-desc">
+                Your home away from home. Experience <br>the perfect blend of comfort, ease, and <br>warm hospitality at Elicris Place.
+            </p>
+
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+            <li><a href="../index.html">Home</a></li>
+                <li><a href="../Contact/contact.html">Contact</a></li>
+                <li><a href="./rooms.html">Rooms & Hotel</a></li>
+                <li><a href="../Rentals/rentals.html">Airbnb Rentals</a></li>
+                <li><a href="../Gallery/gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column contact-section">
+            <h4>Contact Us</h4>
+            <p>📍 6 Anuoluwapo Cl, Allen, <br> Ikeja 100281, Lagos</p>
+            <a href="tel:+2349167140000" class="phone"><i class="fa-solid fa-phone"></i> +234 916 714 0000</a>
+            <a href="mailto:info@elicrisplace.com" class="mail"><i class="fa-solid fa-envelope"></i> info@elicrisplace.com</a>
+            <p><i class="fa-solid fa-circle-check"></i> 24/7 Support Available</p>
+        </div>
+    </div>
+
+    <hr>
+        <p class="copyright">© 2025 Elicris Place. All rights reserved.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+<script src="./rooms.js"></script>
+
+</body>
+</html>
